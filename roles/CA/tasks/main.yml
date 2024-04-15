@@ -1,0 +1,5 @@
+---
+- name: Install Certification Authority
+  ansible.windows.win_feature:
+    name: ADCS-Cert-Authority
+    state: present
