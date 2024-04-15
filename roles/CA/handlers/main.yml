@@ -1,4 +1,4 @@
 ---
 - name: Reboot the server
-  ansible.windows.win_reboot:
-  when: ca_result.reboot_required
+  win_reboot:
+  when: win_feature.reboot_required
