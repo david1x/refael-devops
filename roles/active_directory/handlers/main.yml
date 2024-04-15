@@ -1,0 +1,4 @@
+---
+- name: Reboot the server
+  ansible.windows.win_reboot:
+  when: domain_result.reboot_required
