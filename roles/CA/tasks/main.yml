@@ -3,3 +3,4 @@
   ansible.windows.win_feature:
     name: ADCS-Cert-Authority
     state: present
+  notify: Reboot the server
