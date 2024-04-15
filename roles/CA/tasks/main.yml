@@ -3,5 +3,7 @@
   ansible.windows.win_feature:
     name: ADCS-Cert-Authority
     state: present
-    include_management_tools: yes
+    include_management_tools: true
+    include_sub_features: true
+  register: ca_result
   notify: Reboot the server
