@@ -1,7 +1,4 @@
-- name: Deploy Splunk Docker Image
-  community.docker.docker_compose_v2:
-    project_src: "."
-    files:
-      - docker-compose.yml
-    state: present
-    detached: yes
+- name: Deploy Splunk in Docker
+  ansible.builtin.shell:
+    cmd: "docker-compose up -d"
+  register: splunk_result
