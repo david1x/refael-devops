@@ -3,3 +3,5 @@
     project_src: "."
     files:
       - docker-compose.yml
+    state: present
+    detached: yes

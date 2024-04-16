@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+   splunk1:
+    image: ${SPLUNK_IMAGE:-splunk/splunk:latest}
+    container_name: splunk1
+    hostname: splunk1
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=${SPLUNK_PASSWORD}
+    env_file:
+      - .env
+    ports:
+      - 8780:8000
+      - 8788:8088
+      - 8789:8089
+      - 9997:9997
+    volumes:
+      - ./cert_file:/certs
