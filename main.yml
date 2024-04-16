@@ -5,4 +5,10 @@
   roles:
     - active_directory
     - CA
-    #- iis_web_srv
+    - iis_web_srv
+
+- name: Deploy Splunk Container
+  hosts: localhost
+  gather_facts: no
+  roles:
+    - splunk 

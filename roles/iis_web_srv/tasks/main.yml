@@ -4,3 +4,4 @@
     name: Web-Server,Web-Common-Http
     state: present
   register: iis_result
+  notify: Reboot the server
