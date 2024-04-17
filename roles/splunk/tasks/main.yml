@@ -1,3 +1,4 @@
+---
 - name: Deploy Splunk in Docker
   ansible.builtin.shell:
     cmd: "docker-compose up -d"
