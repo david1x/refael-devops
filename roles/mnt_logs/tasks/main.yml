@@ -3,13 +3,11 @@
   apt:
     name: smbclient
     state: present
-  when: ansible_os_family == "Debian"
 
 - name: Create mount directory
   file:
     path: /mnt/win_iis_logs
     state: directory
-  when: ansible_os_family == "Debian"
 
 - name: Mount shared folder
   mount:
@@ -18,4 +16,3 @@
     fstype: cifs
     opts: username=ubuntu,password=12345678@Rd
     state: mounted
-  when: ansible_os_family == "Debian"

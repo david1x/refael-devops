@@ -7,15 +7,15 @@
   notify: Reboot the server
 
 - name: Share IIS log folder
-  win_share:
+  ansible.windows.win_share:
     name: LogFiles
     description: Shared IIS Logs
     path: C:\inetpub\logs\LogFiles
     list: yes
-    read:
-      - Everyone
+    full: Administrators
 
 - name: Restart Service
-  win_service:
+  ansible.windows.win_service:
     name: LanmanServer
     state: restarted
+    force_dependent_services: yes
