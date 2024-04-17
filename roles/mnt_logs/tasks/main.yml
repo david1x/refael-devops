@@ -6,7 +6,7 @@
 
 - name: Create mount directory
   file:
-    path: /mnt/win_iis_logs
+    path: /mnt/windows_iis_logs
     state: directory
 
 - name: Mount shared folder

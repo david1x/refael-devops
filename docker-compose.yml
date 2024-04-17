@@ -17,7 +17,7 @@ services:
       - 9997:9997
     volumes:
       - ./certs:/opt/splunk/certs
-      - ./web_logs:/opt/splunk/web_logs
+      - /mnt/windows_iis_logs:/opt/splunk/web_logs
 
 volumes:
   splunk_volumes:
