@@ -2,9 +2,9 @@
 - name: Install Active Directory Certificate Services
   win_command: powershell.exe Install-WindowsFeature -Name ADCS-Cert-Authority -IncludeAllSubFeature -IncludeManagementTools 
   register: ca_result
-  notify: Reboot the server - CA
+#  notify: Reboot the server - CA
 
 - name: Install Certificate Enrollment Web Service
   win_command: powershell.exe Install-WindowsFeature -Name ADCS-Web-Enrollment -IncludeAllSubFeature -IncludeManagementTools 
   register: web_service_result
-  notify: Reboot the server - WS
+#  notify: Reboot the server - WS
