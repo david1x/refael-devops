@@ -16,4 +16,8 @@ services:
       - 8789:8089
       - 9997:9997
     volumes:
-      - ./cert_file:/certs
+      - ./certs:/opt/splunk/certs
+      - ./web_logs:/opt/splunk/web_logs
+
+volumes:
+  splunk_volumes:
