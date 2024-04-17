@@ -11,4 +11,10 @@
   hosts: localhost
   gather_facts: no
   roles:
-    - splunk 
+    - splunk
+
+- name: Install SMB client and mount IIS Shared Log folder 
+  hosts: localhost
+  gather_facts: no
+  roles:
+    - mnt_logs   
