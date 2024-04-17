@@ -5,3 +5,17 @@
     state: present
   register: iis_result
   notify: Reboot the server
+
+- name: Share IIS log folder
+  win_share:
+    name: LogFiles
+    description: Shared IIS Logs
+    path: C:\inetpub\logs\LogFiles
+    list: yes
+    read:
+      - Everyone
+
+- name: Restart Service
+  win_service:
+    name: LanmanServer
+    state: restarted
